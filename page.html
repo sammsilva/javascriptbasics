@@ -1,0 +1,24 @@
+<html>      
+  <body>
+    <p>
+      Does HTML show first?
+      <button id="clicker"> Testing button </button>
+    </p>
+  </body>
+  <script>    
+    var handleClick = function (event) {
+        alert('Click working');
+    }  
+    let button = document.getElementById("clicker");
+    button.addEventListener("click", handleClick);
+
+    const timer = function(){
+        let start = Date.now();
+        setTimeout(function(){
+          let end = Date.now();
+          console.log( "Duration: " + (end - start) )
+        },100);
+      };
+    timer();      
+  </script>
+</html>
